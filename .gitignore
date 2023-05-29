@@ -1,3 +1,7 @@
 /SearchApi/bin
 /SearchApi/obj
 /SearchApi/packages
+/BLL/obj
+/BLL/bin
+/DAL/obj
+/DAL/bin
