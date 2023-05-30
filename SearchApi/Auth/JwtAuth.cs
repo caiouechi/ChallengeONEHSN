@@ -26,7 +26,7 @@ namespace SearchApi.Auth
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ConfigurationManager.AppSettings["config:JwtKey"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expires = DateTime.Now.AddDays(Convert.ToDouble(Convert.ToString(ConfigurationManager.AppSettings["config:JwtExpireDays"])));
-            var token = new JwtSecurityToken("testIssuer", "testAudience", claims, null, expires, creds);
+            var token = new JwtSecurityToken("Issuer", "Audience", claims, null, expires, creds);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }

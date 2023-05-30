@@ -17,7 +17,7 @@ namespace SearchApi.Controllers
         [Route("Rectangle/GenerateJWT")]
         public string GenerateToken()
         {
-            var token = JwtAuth.GenerateJwtToken("testCaio", new List<string>() { "Admin" });
+            var token = JwtAuth.GenerateJwtToken("Caio", new List<string>() { "Admin" });
 
             return token;
         }
